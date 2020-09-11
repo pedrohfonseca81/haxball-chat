@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .messages {
+        width: 300px;
+        height: 100%;
+        border-style: solid;
+        border-width: 1px;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .messages .player {
+        width: 300px;
+      }
+
+      .messages .player .name {
+        display: inline-block;
+      }
+
+      .messages .player .divider {
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      .messages .player .message {
+        display: inline-block;
+      }
+
+      .send_message_div {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="messages"></div>
+    <div class="send_message_div" style="width: 300px">
+      <hr />
+      <input placeholder="Name" id="send_message_name" style="width: 30%" />
+      <input
+        placeholder="Message"
+        id="send_message_message"
+        style="width: 40%"
+      />
+      <button id="send_message" style="width: 20%">Send</button>
+    </div>
+    <script src="dist/main.js"></script>
+  </body>
+</html>
