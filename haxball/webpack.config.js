@@ -1,4 +1,4 @@
 module.exports = {
     entry: "./index.js",
-    mode: "development",
+    mode: "production",
 };

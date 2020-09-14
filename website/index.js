@@ -12,7 +12,7 @@ function sendMessage(name, message) {
 
     name.value = "";
     message.value = "";
-}
+};
 
 document.getElementById("send_message").addEventListener("click", () => {
     let name = document.getElementById("send_message_name");
@@ -29,16 +29,15 @@ document.getElementById("send_message").addEventListener("click", () => {
             return sendMessage(name, message);
         };
     });
-
     sendMessage(name, message);
-})
+});
 
 io.on("getMessages", (players) => {
     for (const player of players) {
         document.getElementsByClassName("messages")[0].innerHTML += `<div class="player"><p class="name">${player.name}</p><div class="divider">: </div><p class="message">${player.message}</p></div>`
         window.scrollTo(0,document.body.scrollHeight);
-    }
-})
+    };
+});
 
 io.on("getMessage", (player) => {
     document.getElementsByClassName("messages")[0].innerHTML += `<div class="player"><p class="name">${player.name}</p><div class="divider">: </div><p class="message">${player.message}</p></div>`
