@@ -6,7 +6,7 @@ const room = new Room().createRoom({ roomName: "Hi", noPlayer: true });
 
 io.on("sendMessage", (player) => {
     room.sendAnnouncement(player.name + ": " + player.message);
-})
+});
 
 room.onPlayerJoin = (player) => {
     new Room(room).updateAdmins();
